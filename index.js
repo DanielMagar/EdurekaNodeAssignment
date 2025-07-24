@@ -5,8 +5,8 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-//get
-app.get('/getJsonData', (req, res)=> {
+//get the JSON data from the data.json file 
+app.get('/getData', (req, res)=> {
   const jsonData = fs.readFileSync(path.join(__dirname, 'data.json'));
   res.json(JSON.parse(jsonData));
 })
